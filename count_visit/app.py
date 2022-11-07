@@ -38,8 +38,6 @@ def lambda_handler(event, context):
             "Access-Control-Allow-Methods": "*",
         },
         "body": json.dumps({
-            "count": str(count),
-            "message": "hello world",
-            # "location": ip.text.replace("\n", "")
+            "count": str(count)
         }),
     }
