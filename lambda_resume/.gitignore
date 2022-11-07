@@ -238,7 +238,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # Build folder
-
 */build/*
-
+*/.venv39/*
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
