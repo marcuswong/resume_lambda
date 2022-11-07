@@ -19,7 +19,6 @@ jobs:
           aws-region: 'us-east-1'
       # sam build 
       - name: build
-        working-directory: ./lambda_resume
         run: sam build --use-container
 
 # Run Unit tests- Specify unit tests here 
