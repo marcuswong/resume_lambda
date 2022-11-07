@@ -25,4 +25,4 @@ jobs:
 
 # sam deploy
       - name: deploy
-        run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name lamba-resume --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-19uhd7mcox02m --capabilities CAPABILITY_IAM --region us-east-1
+        run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name lamba-resume --s3-bucket aws-sam-cli-managed-prod-pipeline-artifactsbucket-jf68tabmu6xf --capabilities CAPABILITY_IAM --region us-east-1
