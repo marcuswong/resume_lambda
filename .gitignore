@@ -241,3 +241,15 @@ $RECYCLE.BIN/
 # Build folder
 */build/*
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
+.venvP39/pyvenv.cfg
+.venvP39/Scripts/activate
+.venvP39/Scripts/activate.bat
+.venvP39/Scripts/Activate.ps1
+.venvP39/Scripts/deactivate.bat
+.venvP39/Scripts/easy_install-3.9.exe
+.venvP39/Scripts/easy_install.exe
+.venvP39/Scripts/pip.exe
+.venvP39/Scripts/pip3.9.exe
+.venvP39/Scripts/pip3.exe
+.venvP39/Scripts/python.exe
+.venvP39/Scripts/pythonw.exe

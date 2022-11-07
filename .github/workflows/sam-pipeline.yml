@@ -5,6 +5,9 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -15,9 +18,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'us-east-1'
       # sam build 
-      - run: sam build --use-container
+      - name: build
+        working-directory: ./lambda_resume
+        run: sam build --use-container
 
 # Run Unit tests- Specify unit tests here 
 
 # sam deploy
-      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-19uhd7mcox02m --capabilities CAPABILITY_IAM --region us-east-1
+      - name: deploy
+        working-directory: ./lambda_resume
+        run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name lamba-resume --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-19uhd7mcox02m --capabilities CAPABILITY_IAM --region us-east-1
